@@ -42,7 +42,7 @@ module SpaPracticeBackend
     #
     Rails.application.config.session_store :cookie_store,
       domain: "#{ENV['SPA_PRACTICE_DOMAIN_NAME']}",
-      key: "_#{ENV['SPA_PRACTICE_APP_HOST_NAME']}_session_id",
+      key: "_#{ENV['SPA_PRACTICE_BACKEND_HOST_NAME']}_session_id",
       tld_length: ("#{ENV['SPA_PRACTICE_DOMAIN_NAME']}".presence || 'localhost').split('.').length
     Rails.application.config.middleware.use ActionDispatch::Cookies # Required for all session management
     Rails.application.config.middleware.use ActionDispatch::Session::CookieStore, Rails.application.config.session_options

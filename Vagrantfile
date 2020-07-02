@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "webapp" do |webapp|
     webapp.vm.hostname = "spa-practice.example.com"
     webapp.hostmanager.aliases = [
-      "app.spa-practice.example.com",         # Rails(API)
+      "backend.spa-practice.example.com",     # Rails(API)
       "frontend.spa-practice.example.com",    # Nuxt(SPI)
     ]
     webapp.vm.box = "bento/amazonlinux-2"
